@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.estudos.Filme;
 import br.com.alura.screenmatch.estudos.Serie;
 
@@ -11,8 +12,8 @@ public class Main {
         filme1.setNome("Homem de Ferro");
         filme1.setAnoDeLancamento(2008);
         filme1.setDuracao(180);
-        filme1.avalia(9.4);
-        filme1.avalia(10);
+        filme1.avalia(7.2);
+        filme1.avalia(8);
         filme1.avalia(9);
 
         filme1.exibeFichaTecnica();
@@ -33,15 +34,15 @@ public class Main {
         filme2.setNome("Avatar");
         filme2.setAnoDeLancamento(2012);
         filme2.setDuracao(200);
-        filme2.avalia(9.4);
-        filme2.avalia(10);
-        filme2.avalia(9);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(filme1);
         calculadora.inclui(filme2);
         calculadora.inclui(serie1);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filme1);
 
     }
 }

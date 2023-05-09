@@ -9,6 +9,7 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracao;
 
+
     public int getDuracao() {
         return duracao;
     }
@@ -58,4 +59,5 @@ public class Titulo {
     public double obtemMediaDasAvaliacoes(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
+
 }
