@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.estudos.Filme;
 import br.com.alura.screenmatch.estudos.Serie;
 
@@ -27,6 +28,9 @@ public class Main {
         System.out.println("Temporadas: " + serie1.getTemporadas());
         System.out.println("Episódios por temporada: " + serie1.getEpisodiosPorTemporada());
         System.out.println("Duração de cada episódio: " + serie1.getMinutosPorEpisodio());
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+
 
     }
 }
