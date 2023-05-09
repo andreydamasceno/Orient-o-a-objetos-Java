@@ -5,7 +5,8 @@ public class Serie extends Titulo {
     private int temporadas;
     private boolean emAndamento;
     private int episodiosPorTemporada;
-    private int minutosPorEpisodio;
+    private int duracaoPorEpisodio;
+
 
     public int getTemporadas() {
         return temporadas;
@@ -31,11 +32,15 @@ public class Serie extends Titulo {
         this.episodiosPorTemporada = episodiosPorTemporada;
     }
 
-    public int getMinutosPorEpisodio() {
-        return minutosPorEpisodio;
+    public int getDuracaoPorEpisodio() {
+        return duracaoPorEpisodio;
     }
 
-    public void setMinutosPorEpisodio(int minutosPorEpisodio) {
-        this.minutosPorEpisodio = minutosPorEpisodio;
+    public void setDuracaoPorEpisodio(int duracaoPorEpisodio) {
+        this.duracaoPorEpisodio = duracaoPorEpisodio;
+    }
+
+    public int getDuracao(){
+        return temporadas * episodiosPorTemporada * duracaoPorEpisodio;
     }
 }

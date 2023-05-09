@@ -7,6 +7,15 @@ public class Titulo {
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
+    private int duracao;
+
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
+    }
 
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;

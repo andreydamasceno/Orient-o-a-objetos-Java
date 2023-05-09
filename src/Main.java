@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.estudos.Serie;
 public class Main {
     public static void main(String[] args) {
         Filme filme1 = new Filme();
+        Filme filme2 = new Filme();
         Serie serie1 = new Serie();
         
         filme1.setNome("Homem de Ferro");
@@ -23,14 +24,24 @@ public class Main {
         serie1.setAnoDeLancamento(2000);
         serie1.setTemporadas(9);
         serie1.setEpisodiosPorTemporada(20);
-        serie1.setMinutosPorEpisodio(20);
+        serie1.setDuracaoPorEpisodio(20);
         serie1.exibeFichaTecnica();
         System.out.println("Temporadas: " + serie1.getTemporadas());
         System.out.println("Episódios por temporada: " + serie1.getEpisodiosPorTemporada());
-        System.out.println("Duração de cada episódio: " + serie1.getMinutosPorEpisodio());
+        System.out.println("Duração de cada episódio: " + serie1.getDuracaoPorEpisodio());
+
+        filme2.setNome("Avatar");
+        filme2.setAnoDeLancamento(2012);
+        filme2.setDuracao(200);
+        filme2.avalia(9.4);
+        filme2.avalia(10);
+        filme2.avalia(9);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
-
+        calculadora.inclui(filme1);
+        calculadora.inclui(filme2);
+        calculadora.inclui(serie1);
+        System.out.println(calculadora.getTempoTotal());
 
     }
 }
