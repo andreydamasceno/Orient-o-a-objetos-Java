@@ -9,7 +9,7 @@ public class CalculadoraDeTempo {
 
     public int getTempoTotal() {
 
-       return tempoTotal;
+       return this.tempoTotal;
     }
 
    public void inclui (Titulo t) {
