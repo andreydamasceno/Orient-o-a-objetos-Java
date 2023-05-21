@@ -1,12 +1,14 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
-import br.com.alura.screenmatch.estudos.Episodios;
-import br.com.alura.screenmatch.estudos.Filme;
-import br.com.alura.screenmatch.estudos.Serie;
+import br.com.alura.screenmatch.modelos.Episodios;
+import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
 
 import java.util.ArrayList;
 
-public class Main {
+public class Principal {
     public static void main(String[] args) {
         Filme filme1 = new Filme("homem de ferro", 2008);
         Filme filme2 = new Filme("Avatar", 2022);
@@ -51,14 +53,14 @@ public class Main {
         filme3.setDuracao(160);
         filme3.avalia(9.6);
 
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
-        listaDeFilmes.add(filme1);
-        listaDeFilmes.add(filme2);
-        listaDeFilmes.add(filme3);
-        System.out.println("Tamanho da lista de filmes: " + listaDeFilmes.size());
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
-        System.out.println(listaDeFilmes);
-        System.out.println(listaDeFilmes.get(2).toString());
+        ArrayList<Filme> lista = new ArrayList<>();
+        lista.add(filme1);
+        lista.add(filme2);
+        lista.add(filme3);
+        System.out.println("Tamanho da lista de filmes: " + lista.size());
+        System.out.println("Primeiro filme: " + lista.get(0).getNome());
+        System.out.println(lista);
+        System.out.println(lista.get(2).toString());
 
     }
 }

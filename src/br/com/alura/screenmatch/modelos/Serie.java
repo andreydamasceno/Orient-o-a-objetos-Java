@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.estudos;
+package br.com.alura.screenmatch.modelos;
 
 public class Serie extends Titulo {
 
@@ -9,6 +9,10 @@ public class Serie extends Titulo {
 
     public Serie(String nome, int anoDeLancamento) {
         super(nome, anoDeLancamento);
+    }
+
+    public String toString() {
+        return "Série: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 
     public int getTemporadas() {
