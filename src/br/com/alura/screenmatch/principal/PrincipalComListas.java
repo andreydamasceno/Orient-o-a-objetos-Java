@@ -5,10 +5,11 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
-        Filme filme1 = new Filme("homem de ferro", 2008);
+        Filme filme1 = new Filme("Homem de ferro", 2008);
         Filme filme2 = new Filme("Avatar", 2022);
         Serie serie1 = new Serie("The Office", 2000);
         var filme3 = new Filme("Mario Bros.", 2023);
@@ -28,5 +29,16 @@ public class PrincipalComListas {
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("woobuffet");
+        buscaPorArtista.add("Steve Carrell");
+        System.out.println(buscaPorArtista);
+        Collections.sort(buscaPorArtista);
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }
